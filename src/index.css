@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #060b4a;
+  --color-navy-900: #0a1272;
+  --color-navy-800: #0d1a8a;
+  --color-navy-700: #1a2aa3;
+  --color-navy-100: #e4e7fb;
+  --color-navy-50: #f3f4fe;
+  --color-gold-600: #c78f27;
+  --color-gold-500: #dfa944;
+  --color-gold-400: #e8bb64;
+  --color-gold-100: #faf0d9;
+  --color-gold-50: #fdf8ec;
+  --font-display: "Bitter", Georgia, serif;
+  --font-sans: "Nunito", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #1b2150;
+  background: #fff;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+@layer components {
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 800;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-gold {
+  background: var(--color-gold-500);
+  color: var(--color-navy-950);
+}
+.btn-gold:hover {
+  background: var(--color-gold-400);
+  transform: translateY(-1px);
+}
+.btn-navy {
+  background: var(--color-navy-900);
+  color: #fff;
+}
+.btn-navy:hover {
+  background: var(--color-navy-700);
+}
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.btn-outline:hover {
+  background: #fff;
+  color: var(--color-navy-900);
+}
+
+.field {
+  width: 100%;
+  border: 1.5px solid #d3d7f2;
+  border-radius: 0.75rem;
+  padding: 0.7rem 0.9rem;
+  background: #fff;
+  outline: none;
+}
+.field:focus {
+  border-color: var(--color-navy-700);
+  box-shadow: 0 0 0 3px rgba(26, 42, 163, 0.15);
+}
+
+}
+
+.dots-bg {
+  background-image: radial-gradient(rgba(223, 169, 68, 0.35) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}
